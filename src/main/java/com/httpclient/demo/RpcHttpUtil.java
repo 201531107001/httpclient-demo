@@ -74,6 +74,8 @@ public class RpcHttpUtil {
 		InputStream is = response.getEntity().getContent();
 		String result = IOUtils.toString(is, "GBK");
 
+		is.close();
+		client.close();
 		return result;
 	}
 
