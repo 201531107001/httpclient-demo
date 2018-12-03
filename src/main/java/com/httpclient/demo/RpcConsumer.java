@@ -1,6 +1,8 @@
 package com.httpclient.demo;
 
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -24,5 +26,6 @@ public class RpcConsumer {
 		InputStream is = response.getEntity().getContent();
 		String ret = IOUtils.toString(is, "utf-8");
 		System.out.println(ret);
+		
 	}
 }
